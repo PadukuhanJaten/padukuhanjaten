@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Umkm Jaten</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/logoJaten.png" type="image/png" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .swiper-container {
+        width: 100%;
+        height: 100vh; /* Full height for better viewing */
+        z-index: 5;
+      }
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff; /* Add a background color for better contrast */
+      }
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure the image covers the container fully */
+      }
+      .swiper-button-next,
+      .swiper-button-prev,
+      .swiper-pagination {
+        z-index: 5; /* Ensure these elements are below navbar */
+      }
+      .about-section .content {
+        margin-bottom: 1rem; /* Reduce margin between elements */
+      }
+      .about-section img {
+        max-height: 300px; /* Adjust the max-height to make the image shorter */
+        height: auto;
+        width: 100vh;
+        object-fit: cover;
+      }
+      @media (min-width: 768px) {
+        .about-section img {
+          max-height: 100px;
+          width: 50vh;
+        }
+      }
+      @media (min-width: 1024px) {
+        .about-section img {
+          max-height: 300px;
+          width: 100vh; /* Square aspect ratio for larger screens */
+        }
+      }
+      .about-section h2 {
+        margin-top: 0;
+        margin-bottom: 0.5rem; /* Reduce space below the heading */
+      }
+      .about-section p {
+        margin-top: 0.5rem; /* Reduce space above the paragraph */
+        margin-bottom: 0.5rem; /* Reduce space below the paragraph */
+      }
+      .about-section a {
+        margin-top: 0.5rem; /* Reduce space above the link */
+      }
+      /* Custom styles for Products and Partners Section */
+      .products-section img,
+      .partners-section img {
+        margin-bottom: 8px; /* Mengurangi jarak antara gambar dan teks */
+      }
+
+      .products-section p,
+      .partners-section p {
+        margin-top: 4px; /* Mengurangi jarak atas teks */
+      }
+
+      /* Layout Adjustments */
+      @media (min-width: 768px) {
+        .products-section .item,
+        .partners-section .item {
+          margin-bottom: 16px; /* Menambah jarak antar item di layar besar */
+        }
+      }
+
+      @media (max-width: 767px) {
+        .products-section .item,
+        .partners-section .item {
+          margin-bottom: 8px; /* Mengurangi jarak antar item di layar kecil */
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed top-0 w-full z-10">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <a href="index.html" class="text-gray-700 hover:text-black">
+            <i class="fas fa-arrow-left fa-lg"></i>
+          </a>
+          <div class="text-2xl font-bold ml-2">Umkm Jaten</div>
+        </div>
+        <nav class="hidden md:flex space-x-4">
+          <a href="#" class="text-gray-700 hover:text-green-500">Beranda</a>
+          <a href="#about" class="text-gray-700 hover:text-green-500">Tentang umkm</a>
+          <a href="#contact" class="text-gray-700 hover:text-green-500">Kontak</a>
+        </nav>
+        <div class="md:hidden flex items-center">
+          <button id="hamburger" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden bg-white shadow-md md:hidden">
+        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Beranda</a>
+        <a href="#about" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Tentang umkm</a>
+        <a href="#contact" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Kontak</a>
+      </div>
+    </header>
+
+    <!-- Swiper -->
+    <section id="home" class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./img/UMKM/mainpicture.png" alt="Image 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/UMKM/bahanbakusingkong.jpg" alt="Image 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/UMKM/mainpicture.png" alt="Image 3" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </section>
+
+    <!-- Tentang UMKM -->
+    <section id="about" class="py-20 bg-white about-section">
+      <h2 class="text-3xl font-bold text-center mb-8 pb-4">Tentang UMKM</h2>
+      <div class="container mx-auto px-4 mt-8">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="w-full md:w-1/2 flex items-center justify-center mb-4 order-1 md:order-2">
+            <img src="img/UMKM/image1.jpeg" alt="Tentang Desa" class="rounded-lg shadow-lg" />
+          </div>
+          <div class="w-full md:w-1/2 md:pl-10 mt-6 md:mt-0 content order-2 md:order-1">
+            <p class="mt-4 text-gray-700">
+              UMKM Olahan Singkong Padukuhan Jaten Ngestirejo sebagai komunitas yang berfokus pada
+              pengolahan singkong lokal menjadi berbagai produk berkualitas tinggi seperti keripik
+              dan tepung singkong. Melalui inovasi dan kreativitas, kami menghasilkan produk yang
+              lezat dan sehat.
+            </p>
+            <a href="detailpageumkm.html" class="mt-4 inline-block text-blue-500 hover:underline"
+              >Read more</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Video -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Konten Umkm Jaten</h2>
+        <div class="flex flex-wrap justify-center">
+          <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+            <div class="bg-white p-6 shadow-lg">
+              <div class="aspect-w-16 aspect-h-9">
+                <iframe
+                  class="w-full h-full"
+                  src="https://www.youtube.com/embed/Stoj_blm6Ak"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <h3 class="text-xl font-bold mt-4">Video 1</h3>
+              <p class="mt-2 text-gray-600">Pembuatan Keripik Kaca</p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+            <div class="bg-white p-6 shadow-lg">
+              <div class="aspect-w-16 aspect-h-9">
+                <iframe
+                  class="w-full h-full"
+                  src="https://www.youtube.com/embed/5lfJVk9tcxM"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <h3 class="text-xl font-bold mt-4">Video 2</h3>
+              <p class="mt-2 text-gray-600">Pembuatan Kerupuk Singkong Mentah</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Kontak Kami</h2>
+        <div class="flex flex-wrap justify-center">
+          <div class="w-full lg:w-1/2 p-4">
+            <div class="bg-green-100 p-6 rounded-lg shadow-lg">
+              <h3 class="text-2xl font-bold mb-4">Alamat Kantor</h3>
+              <p>Jl. Jaten Ngestirejo, Kec. Tanjungsari, Kab. Gunungkidul</p>
+              <p>Email: jatenpadukuhan@gmail.com</p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3950.123921634214!2d110.609804!3d-8.088842999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMDUnMTkuOCJTIDExMMKwMzYnMzUuMyJF!5e0!3m2!1sen!2sid!4v1718775652766!5m2!1sen!2sid"
+                class="pt-3"
+                width="100%"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-400 py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-white text-center md:text-left mb-4 md:mb-0">
+            &copy; 2023 Umkm Jaten. All rights reserved.
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:text-gray-400"
+              ><i class="fab fa-facebook fa-lg"></i
+            ></a>
+            <a href="#" class="text-white hover:text-gray-400"
+              ><i class="fab fa-twitter fa-lg"></i
+            ></a>
+            <a href="#" class="text-white hover:text-gray-400"
+              ><i class="fab fa-instagram fa-lg"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      document.getElementById("hamburger").addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

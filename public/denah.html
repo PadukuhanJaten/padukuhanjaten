@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Jaten</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Your Tailwind CSS generated file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/logoJaten.png" type="image/png" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      .zoom-container {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        cursor: zoom-in; /* Default cursor */
+      }
+      .zoom-container.zoomed-in {
+        cursor: zoom-out; /* Cursor when zoomed in */
+      }
+      .zoom-image {
+        transition: transform 0.3s ease-in-out;
+        display: block;
+        width: 100%;
+      }
+      .zoom-container.zoomed-in .zoom-image {
+        transform: scale(6); /* Adjust the scale value as needed */
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-white shadow fixed top-0 w-full z-10">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <a href="profil.html" class="text-gray-700 hover:text-black">
+            <i class="fas fa-arrow-left fa-lg"></i>
+          </a>
+          <a href="profil.html" class="text-2xl font-bold ml-2">Profil Jaten</a>
+        </div>
+        <nav class="hidden md:flex space-x-4">
+          <a href="profil.html#" class="text-gray-700 hover:text-black">Beranda</a>
+          <a href="profil.html#about" class="text-gray-700 hover:text-black">Tentang Dusun</a>
+          <a href="profil.html#fasilitas" class="text-gray-700 hover:text-black">Fasilitas Dusun</a>
+          <a href="profil.html#map" class="text-gray-700 hover:text-black">Peta Dusun</a>
+          <a href="profil.html#contact" class="text-gray-700 hover:text-black">Kontak</a>
+        </nav>
+        <div class="md:hidden flex items-center">
+          <button id="hamburger" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden bg-white shadow-md md:hidden">
+        <a href="profil.html#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Beranda</a>
+        <a href="profil.html#about" class="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+          >Tentang Dusun</a
+        >
+        <a href="profil.html#fasilitas" class="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+          >Fasilitas Dusun</a
+        >
+        <a href="profil.html#map" class="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+          >Peta Dusun</a
+        >
+        <a href="profil.html#contact" class="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+          >Kontak</a
+        >
+      </div>
+    </header>
+
+    <!-- Peta Section -->
+    <section id="peta" class="pt-20 pb-10 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col items-center">
+          <div class="w-full md:w-3/4 lg:w-2/3 mb-8">
+            <div class="zoom-container">
+              <img
+                src="img/Denah/mapjaten.png"
+                alt="Peta Padukuhan Jaten"
+                class="rounded-lg shadow-lg w-full zoom-image"
+              />
+            </div>
+          </div>
+          <div class="w-full md:w-3/4 lg:w-2/3 text-center">
+            <h2 class="text-2xl font-bold mb-4">Peta Padukuhan Jaten</h2>
+            <p class="text-gray-700">
+              Berikut adalah denah dusun Padukuhan Jaten yang menunjukkan lokasi penting dan
+              fasilitas yang tersedia di dusun ini. Denah ini dapat membantu Anda untuk menemukan
+              berbagai fasilitas dan tempat-tempat penting di dusun kami. Seperti halnya UMKM dan
+              Ekowisata.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-lg font-bold">Padukuhan Jaten.</h2>
+        <p class="mt-2">Padukuhan Jaten adalah desa yang kaya akan filosofi dan sejarah.</p>
+        <div class="mt-4">
+          <a href="#" class="text-white hover:text-gray-400 mx-2"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="text-white hover:text-gray-400 mx-2"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white hover:text-gray-400 mx-2"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Alpine.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.min.js"
+      defer
+    ></script>
+    <script>
+      document.getElementById("hamburger").addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+    </script>
+
+    <script>
+      const zoomContainer = document.querySelector(".zoom-container");
+      const zoomImage = document.querySelector(".zoom-image");
+
+      zoomContainer.addEventListener("click", function (e) {
+        const x = e.clientX - zoomContainer.getBoundingClientRect().left;
+        const y = e.clientY - zoomContainer.getBoundingClientRect().top;
+
+        if (zoomContainer.classList.contains("zoomed-in")) {
+          zoomContainer.classList.remove("zoomed-in");
+          zoomImage.style.transformOrigin = "center center";
+          zoomImage.style.transform = "scale(1)";
+        } else {
+          zoomContainer.classList.add("zoomed-in");
+          zoomImage.style.transformOrigin = `${x}px ${y}px`;
+          zoomImage.style.transform = "scale(6)"; /* Adjust the scale value as needed */
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Jaten</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Your Tailwind CSS generated file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/logoJaten.png" type="image/png" />
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      .swiper-container {
+        width: 100%;
+        height: 95vh;
+        z-index: 5;
+      }
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+      }
+      .swiper-button-next,
+      .swiper-button-prev,
+      .swiper-pagination {
+        z-index: 5; /* Ensure these elements are below navbar */
+      }
+      .responsive-iframe-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 100%; /* Default aspect ratio for mobile */
+      }
+      .responsive-iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      @media (min-width: 768px) {
+        .responsive-iframe-container {
+          padding-top: 56.25%; /* 16:9 aspect ratio for desktop */
+        }
+      }
+      @media (min-width: 1024px) {
+        .responsive-iframe-container {
+          padding-top: 40%; /* Square aspect ratio for larger screens */
+        }
+      }
+      .about-section .content {
+        margin-bottom: 1rem; /* Reduce margin between elements */
+      }
+      .about-section img {
+        max-height: 300px; /* Adjust the max-height to make the image shorter */
+        height: auto;
+        width: 100vh;
+        object-fit: cover;
+      }
+      @media (min-width: 768px) {
+        .about-section img {
+          max-height: 100px;
+          width: 50vh;
+        }
+      }
+      @media (min-width: 1024px) {
+        .about-section img {
+          max-height: 300px; 
+          width: 100vh; /* Square aspect ratio for larger screens */
+        }
+      }
+      .about-section h2 {
+        margin-top: 0;
+        margin-bottom: 0.5rem; /* Reduce space below the heading */
+      }
+      .about-section p {
+        margin-top: 0.5rem; /* Reduce space above the paragraph */
+        margin-bottom: 0.5rem; /* Reduce space below the paragraph */
+      }
+      .about-section a {
+        margin-top: 0.5rem; /* Reduce space above the link */
+      }
+      .facility-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      /* Custom styles for background image */
+      .custom-bg {
+        background-image: url("./img/dusunJaten.png");
+        background-size: cover;
+        background-position: center;
+      }
+      .btn-custom {
+        border: 2px solid white;
+        transition: all 0.3s ease;
+      }
+      .btn-custom:hover {
+        border: 2px solid white;
+      }
+      /* .facility-card img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+      } */
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <header class="bg-white shadow fixed top-0 w-full z-10">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <a href="index.html" class="text-gray-700 hover:text-black">
+            <i class="fas fa-arrow-left fa-lg"></i>
+          </a>
+          <a href="#" class="text-2xl font-bold ml-2">Profil Jaten</a>
+        </div>
+        <nav class="hidden md:flex space-x-4">
+          <a href="#" class="text-gray-700 hover:text-black">Beranda</a>
+          <a href="#about" class="text-gray-700 hover:text-black">Tentang Padukuhan</a>
+          <a href="#fasilitas" class="text-gray-700 hover:text-black">Fasilitas Padukuhan</a>
+          <a href="#map" class="text-gray-700 hover:text-black">Peta Padukuhan</a>
+          <a href="#contact" class="text-gray-700 hover:text-black">Kontak</a>
+        </nav>
+        <div class="md:hidden flex items-center">
+          <button id="hamburger" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden bg-white shadow-md md:hidden">
+        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Beranda</a>
+        <a href="#about" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Tentang Padukuhan</a>
+        <a href="#fasilitas" class="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+          >Fasilitas Padukuhan</a
+        >
+        <a href="#map" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Peta Padukuhan</a>
+        <a href="#contact" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Kontak</a>
+      </div>
+    </header>
+
+    <!-- Slider -->
+    <div class="swiper-container mt-16">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide bg-cover" style="background-image: url('img/balai_jaten.jpg')">
+          <h2 class="text-white text-5xl font-bold">BALAI PADUKUHAN JATEN</h2>
+        </div>
+        <div class="swiper-slide bg-cover" style="background-image: url('img/sdnegeri_jaten.jpg')">
+          <h2 class="text-white text-5xl font-bold">SD NEGERI JATEN</h2>
+        </div>
+        <!-- Tambahkan slide lainnya sesuai kebutuhan -->
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Tentang Desa -->
+    <section id="about" class="py-20 bg-white about-section">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="flex items-center justify-center mb-4">
+            <img src="./img/tulisan_jaten.jpg" alt="Tentang Desa" class="rounded-lg shadow-lg" />
+          </div>
+          <div class="md:w-1/2 md:pl-10 mt-6 md:mt-0 content">
+            <h2 class="text-3xl font-bold">Tentang Padukuhan</h2>
+            <p class="mt-4 text-gray-700">
+              Padukuhan Jaten adalah desa yang kaya akan filosofi dan sejarah, dengan penduduk mayoritas petani. 
+              Keberadaan UMKM keripik singkong, wisata ekowisata Tritis, dan berbagai kelompok kesenian menunjukkan 
+              kekayaan ekonomi dan budaya desa ini. Letak geografisnya yang strategis serta tradisi tahunan Rasulan atau 
+              Bersih Dusun menambah keunikan dan kebersamaan warga Padukuhan Jaten.
+            </p>
+            <a href="detailpageprofil.html" class="mt-4 inline-block text-blue-500 hover:underline">Read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="fasilitas" class="bg-white py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Fasilitas Padukuhan</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="text-center facility-card">
+            <img
+              src="img/sdnegeri_jaten.jpg"
+              alt="Facility 1"
+              class="rounded-lg shadow-lg mb-4"
+            />
+            <h3 class="text-xl font-bold">SD Negeri Jaten</h3>
+            <p class="text-gray-700">RT4 RW2 Jaten Ngestirejo Tanjungsari</p>
+          </div>
+          <div class="text-center facility-card">
+            <img
+              src="img/ekowisata_tritis.jpg"
+              alt="Facility 2"
+              class="rounded-lg shadow-lg mb-4"
+            />
+            <h3 class="text-xl font-bold">Ekowisata Tritis</h3>
+            <p class="text-gray-700">Telaga Tritis RT2 RW2 Jaten Ngestirejo Tanjungsari</p>
+          </div>
+          <div class="text-center facility-card">
+            <img
+              src="img/puskesmas_pembantu.jpg"
+              alt="Facility 3"
+              class="rounded-lg shadow-lg mb-4"
+            />
+            <h3 class="text-xl font-bold">Puskesmas Pembantu Ngestirejo</h3>
+            <p class="text-gray-700">RT4 RW2 Jaten Ngestirejo Tanjungsari</p>
+          </div>
+          <div class="text-center facility-card">
+            <img
+              src="img/masjid_khaliddin.jpg"
+              alt="Facility 4"
+              class="rounded-lg shadow-lg mb-4"
+            />
+            <h3 class="text-xl font-bold">Masjid Khaliddin</h3>
+            <p class="text-gray-700">RT5 RW2 Jaten Ngestirejo Tanjungsari</p>
+          </div>
+          <div class="text-center facility-card">
+            <img
+              src="img/paud_kbmt.jpg"
+              alt="Facility 5"
+              class="rounded-lg shadow-lg mb-4"
+            />
+            <h3 class="text-xl font-bold">PAUD Kelompok Bermain Mutiara Thqwa</h3>
+            <p class="text-gray-700">RT4 RW2 Jaten Ngestirejo Tanjungsari</p>
+          </div>
+          <div class="text-center facility-card">
+            <img
+              src="img/balai_jaten.jpg"
+              alt="Facility 6"
+              class="rounded-lg shadow-lg mb-4"
+            />
+            <h3 class="text-xl font-bold">Balai Padukuhan Jaten</h3>
+            <p class="text-gray-700">RT2 RW2 Jaten Ngestirejo Tanjungsari</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Denah Desa -->
+    <section id="map" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Peta Padukuhan</h2>
+        <div class="bg-gradient-to-r rounded-lg shadow-lg p-8 custom-bg">
+          <div class="text-center text-white py-16">
+            <h2 class="text-sm uppercase mb-4">Jelajahi Padukuhan Kami<h2>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-10">
+                Temukan Informasi Lengkap di Sini
+            </h1>
+            <a
+              href="denah.html"
+              class="text-white px-4 py-2 rounded btn-custom font-semibold hover:bg-white hover:text-black"
+              >Pelajari Lebih Lanjut</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center">Kontak Jaten</h2>
+        <div class="mt-8 bg-gray-200 p-8 rounded-lg flex flex-col md:flex-row justify-center items-center">
+          <div class="responsive-iframe-container w-full md:w-1/2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3950.123921634214!2d110.609804!3d-8.088842999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMDUnMTkuOCJTIDExMMKwMzYnMzUuMyJF!5e0!3m2!1sen!2sid!4v1718775652766!5m2!1sen!2sid"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="rounded-lg shadow-lg"
+            ></iframe>
+          </div>
+          <div class="w-full md:w-1/3 p-4 mt-4 md:mt-0 md:ml-4">
+            <h2 class="text-4xl font-extrabold mb-10">Info Kontak</h2>
+            <div class="mb-4">
+              <div class="inline">
+                <i class="fas fa-map-marker-alt text-gray-700"></i>
+              </div>
+              <span class="ml-3 font-bold text-xl">Alamat Kantor</span>
+              <p class="ml-7">Jl. Jaten Ngestirejo, Kec. Tanjungsari, Kab. Gunung Kidul</p>
+            </div>
+            <div class="mb-4">
+              <div class="inline">
+                <i class="fas fa-envelope text-gray-700"></i>
+              </div>
+              <span class="ml-2 font-bold text-xl">Email</span>
+              <p class="ml-7">jatenpadukuhan@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-lg font-bold">Padukuhan Jaten.</h2>
+        <p class="mt-2">
+          Padukuhan Jaten adalah desa yang kaya akan filosofi dan sejarah.
+        </p>
+        <div class="mt-4">
+          <a href="#" class="text-white hover:text-gray-400 mx-2"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="text-white hover:text-gray-400 mx-2">
+            <i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/padukuhanjaten?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-white hover:text-gray-400 mx-2"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Alpine.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.min.js"
+      defer
+    ></script>
+    <script>
+      document.getElementById("hamburger").addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

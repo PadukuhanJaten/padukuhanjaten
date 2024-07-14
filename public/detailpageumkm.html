@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Jaten - Detail</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Your Tailwind CSS generated file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/logoJaten.png" type="image/png" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      .indented {
+        text-align: justify;
+        text-indent: 2em;
+      }
+      .responsive-img {
+        width: 100%;
+        height: auto;
+      }
+      @media (min-width: 768px) {
+        .responsive-img {
+          height: 400px;
+          object-fit: cover;
+        }
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .grid-item {
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+
+      .grid-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .grid-item:hover {
+        transform: scale(1.05);
+      }
+
+      @media (min-width: 768px) {
+        .grid-item img {
+          height: 200px;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-white shadow-md fixed top-0 w-full z-10">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <a href="umkm.html" class="text-gray-700 hover:text-black">
+            <i class="fas fa-arrow-left fa-lg"></i>
+          </a>
+          <div class="text-2xl font-bold ml-2">Umkm Jaten</div>
+        </div>
+        <nav class="hidden md:flex space-x-4">
+          <a href="umkm.html#" class="text-gray-700 hover:text-green-500">Beranda</a>
+          <a href="umkm.html#about" class="text-gray-700 hover:text-green-500">Tentang umkm</a>
+          <a href="umkm.html#contact" class="text-gray-700 hover:text-green-500">Kontak</a>
+        </nav>
+        <div class="md:hidden flex items-center">
+          <button id="hamburger" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden bg-white shadow-md md:hidden">
+        <a href="umkm.html#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Beranda</a>
+        <a href="umkm.html#about" class="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+          >Tentang umkm</a
+        >
+        <a href="umkm.html#contact" class="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+          >Kontak</a
+        >
+      </div>
+    </header>
+
+    <!-- Detail Section -->
+    <section id="detail" class="py-20 bg-gray-100 mt-16">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col items-center">
+          <div class="w-full md:w-3/4 lg:w-2/3">
+            <h2 class="text-2xl font-bold mb-4 text-center">Detail Padukuhan Jaten</h2>
+            <p class="text-gray-700 mb-4 indented">
+              Selamat datang di website UMKM Olahan Singkong Dusun Jaten Ngestirejo! Kami adalah
+              komunitas warga yang berdedikasi untuk mengolah singkong hasil panen lokal menjadi
+              berbagai produk berkualitas tinggi. Melalui inovasi dan kreativitas, kami menghadirkan
+              aneka olahan singkong yang lezat dan sehat, mulai dari keripik singkong hingga tepung
+              singkong. Website ini bertujuan untuk memperkenalkan dan mempromosikan produk unggulan
+              kami kepada khalayak luas, sehingga dapat menjangkau lebih banyak konsumen yang
+              menghargai kualitas dan keunikan produk lokal. Dengan membeli produk kami, Anda turut
+              serta mendukung perekonomian warga dusun dan membantu memajukan usaha kecil di daerah
+              kami.
+            </p>
+            <p class="text-gray-700 mb-4 indented">
+              Produk olahan singkong dari Dusun Jaten Ngestirejo tidak hanya menawarkan cita rasa
+              yang khas, tetapi juga menjamin mutu dan kebersihannya. Semua produk dibuat dengan
+              bahan-bahan alami dan diproses dengan metode yang higienis, sehingga aman untuk
+              dikonsumsi oleh semua kalangan. Kami percaya bahwa dengan kerja keras dan dukungan
+              dari konsumen, produk UMKM kami dapat bersaing di pasar yang lebih luas. Jangan lupa
+              untuk membeli produk olahan singkong asli dari Dusun Jaten Ngestirejo melalui info
+              kontak berikut!
+            </p>
+
+            <!-- Grid layout for images -->
+            <div class="grid-container">
+              <div class="grid-item">
+                <img src="img/UMKM/image1.jpeg" alt="Gambar 1" />
+              </div>
+              <div class="grid-item">
+                <img src="img/UMKM/image2.jpeg" alt="Gambar 2" />
+              </div>
+              <div class="grid-item">
+                <img src="img/UMKM/image3.jpeg" alt="Gambar 3" />
+              </div>
+              <div class="grid-item">
+                <img src="img/UMKM/image4.jpeg" alt="Gambar 4" />
+              </div>
+              <div class="grid-item">
+                <img src="img/UMKM/image5.jpeg" alt="Gambar 4" />
+              </div>
+              <div class="grid-item">
+                <img src="img/UMKM/image6.jpeg" alt="Gambar 4" />
+              </div>
+              <div class="grid-item">
+                <img src="img/UMKM/image7.jpeg" alt="Gambar 4" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-400 py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-white text-center md:text-left mb-4 md:mb-0">
+            &copy; 2023 Umkm Jaten. All rights reserved.
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:text-gray-400"
+              ><i class="fab fa-facebook fa-lg"></i
+            ></a>
+            <a href="#" class="text-white hover:text-gray-400"
+              ><i class="fab fa-twitter fa-lg"></i
+            ></a>
+            <a href="#" class="text-white hover:text-gray-400"
+              ><i class="fab fa-instagram fa-lg"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Alpine.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.min.js"
+      defer
+    ></script>
+    <script>
+      document.getElementById("hamburger").addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

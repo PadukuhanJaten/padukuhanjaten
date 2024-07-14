@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Jaten - Detail</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Your Tailwind CSS generated file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/logoJaten.png" type="image/png" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      .indented {
+        text-align: justify;
+        text-indent: 2em;
+      }
+      .responsive-img {
+        width: 100%;
+        height: auto;
+      }
+      @media (min-width: 768px) {
+        .responsive-img {
+          height: 400px;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-white shadow fixed top-0 w-full z-10">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <a href="profil.html" class="text-gray-700 hover:text-black">
+            <i class="fas fa-arrow-left fa-lg"></i>
+          </a>
+          <a href="profil.html" class="text-2xl font-bold ml-2">Profil Jaten</a>
+        </div>
+        <nav class="hidden md:flex space-x-4">
+          <a href="profil.html#" class="text-gray-700 hover:text-black">Beranda</a>
+          <a href="profil.html#about" class="text-gray-700 hover:text-black">Tentang Dusun</a>
+          <a href="profil.html#fasilitas" class="text-gray-700 hover:text-black">Fasilitas Dusun</a>
+          <a href="profil.html#map" class="text-gray-700 hover:text-black">Peta Dusun</a>
+          <a href="profil.html#contact" class="text-gray-700 hover:text-black">Kontak</a>
+        </nav>
+        <div class="md:hidden flex items-center">
+          <button id="hamburger" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden bg-white shadow-md md:hidden">
+        <a href="profil.html#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Beranda</a>
+        <a href="profil.html#about" class="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+          >Tentang Dusun</a
+        >
+        <a href="profil.html#fasilitas" class="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+          >Fasilitas Dusun</a
+        >
+        <a href="profil.html#map" class="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+          >Peta Dusun</a
+        >
+        <a href="profil.html#contact" class="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+          >Kontak</a
+        >
+      </div>
+    </header>
+
+    <!-- Detail Section -->
+    <section id="detail" class="py-20 bg-gray-100 mt-16">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col items-center">
+          <div class="w-full md:w-3/4 lg:w-2/3 mb-8">
+            <img
+              src="img/tulisan_jaten.jpg"
+              alt="Gambar Detail Padukuhan Jaten"
+              class="rounded-lg shadow-lg responsive-img"
+            />
+          </div>
+          <div class="w-full md:w-3/4 lg:w-2/3">
+            <h2 class="text-2xl font-bold mb-4 text-center">Detail Padukuhan Jaten</h2>
+            <p class="text-gray-700 mb-4 indented">
+              Padukuhan Jaten adalah sebuah desa yang kaya akan sejarah dan filosofi. Nama "Jaten"
+              sendiri berasal dari banyaknya pohon jati yang dahulu tumbuh subur di wilayah ini.
+              Pohon jati ini melambangkan 'migunani' atau manfaat yang besar bagi masyarakat, yang
+              menjadi filosofi dasar dari desa ini. Filosofi tersebut mencerminkan bagaimana desa
+              ini selalu berusaha memberikan yang terbaik bagi penduduknya dan lingkungannya.
+            </p>
+            <p class="text-gray-700 mb-4 indented">
+              Desa ini terbagi menjadi lima RT, masing-masing dengan struktur organisasi yang rapi
+              dan aktif dalam kegiatan sosial. Mayoritas penduduk Padukuhan Jaten adalah petani.
+              Pertanian menjadi sektor utama mata pencaharian, dengan lahan yang luas dan subur.
+              Para petani di desa ini tidak hanya menanam tanaman pangan, tetapi juga terlibat dalam
+              berbagai aktivitas yang meningkatkan kesejahteraan mereka.
+            </p>
+            <p class="text-gray-700 mb-4 indented">
+              Salah satu produk unggulan dari Padukuhan Jaten adalah keripik singkong. UMKM ini
+              dikelola oleh Kelompok Wanita Tani "Ngudi Rejeki". Kelompok ini tidak hanya
+              memproduksi keripik singkong yang lezat, tetapi juga memberikan kontribusi yang
+              signifikan terhadap perekonomian desa. Keripik singkong diproduksi dengan metode
+              tradisional yang higienis, memastikan kualitas yang tinggi. Produk ini dipasarkan ke
+              berbagai wilayah sekitar, menjadikannya salah satu produk unggulan yang dikenal luas.
+            </p>
+            <p class="text-gray-700 mb-4 indented">
+              Selain sektor pertanian dan UMKM, Padukuhan Jaten juga dikenal dengan wisata ekowisata
+              Tritisis. Wisata ini menawarkan pengalaman wisata alam yang asri dengan pemandangan
+              hijau dan udara segar. Pengunjung dapat menikmati berbagai kegiatan seperti berkemah,
+              hiking, dan belajar tentang kelestarian lingkungan. Wisata ini tidak hanya menjadi
+              tempat rekreasi, tetapi juga pusat pendidikan lingkungan bagi masyarakat sekitar dan
+              wisatawan.
+            </p>
+            <p class="text-gray-700 mb-4 indented">
+              Padukuhan Jaten juga kaya akan budaya dengan adanya berbagai kelompok kesenian.
+              Kelompok-kelompok ini aktif dalam seni tari, musik tradisional, dan teater rakyat.
+              Mereka sering mengadakan pertunjukan dalam berbagai acara desa dan festival,
+              mempertahankan dan mempromosikan budaya lokal. Kegiatan budaya ini tidak hanya menjadi
+              hiburan bagi masyarakat, tetapi juga menjadi sarana untuk menjaga dan melestarikan
+              tradisi dan seni lokal.
+            </p>
+            <p class="text-gray-700 mb-4 indented">
+              Secara geografis, Padukuhan Jaten memiliki letak yang strategis. Di sebelah timur
+              berbatasan dengan Padukuhan Mrico, sebelah selatan dengan Padukuhan Walikangin,
+              sebelah barat dengan Kalurahan Banjarejo, dan sebelah utara dengan Padukuhan Mendang
+              1. Lokasi yang strategis ini memudahkan akses ke berbagai wilayah sekitar, menjadikan
+              Jaten sebagai pusat kegiatan ekonomi dan sosial di daerah tersebut.
+            </p>
+            <p class="text-gray-700 mb-4 indented">
+              Salah satu tradisi tahunan yang sangat penting bagi masyarakat Padukuhan Jaten adalah
+              Rasulan atau Bersih Dusun. Tradisi ini merupakan bentuk syukuran atas hasil panen, di
+              mana warga desa berkumpul untuk berdoa, makan bersama, dan menikmati berbagai kegiatan
+              budaya. Rasulan tidak hanya menjadi momen untuk bersyukur atas hasil panen yang
+              melimpah, tetapi juga mempererat tali silaturahmi antarwarga. Tradisi ini mencerminkan
+              rasa syukur dan kebersamaan, serta menjaga harmoni antara warga dan alam.
+            </p>
+            <p class="text-gray-700 indented">
+              Secara keseluruhan, Padukuhan Jaten adalah desa yang kaya akan sejarah, budaya, dan
+              tradisi. Desa ini tidak hanya berusaha untuk mempertahankan nilai-nilai tradisional,
+              tetapi juga terus berkembang untuk memberikan yang terbaik bagi penduduknya. Dengan
+              segala potensi dan keindahannya, Padukuhan Jaten terus berusaha untuk menjadi desa
+              yang maju dan sejahtera.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-lg font-bold">Padukuhan Jaten.</h2>
+        <p class="mt-2">Padukuhan Jaten adalah desa yang kaya akan filosofi dan sejarah.</p>
+        <div class="mt-4">
+          <a href="#" class="text-white hover:text-gray-400 mx-2"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="text-white hover:text-gray-400 mx-2"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white hover:text-gray-400 mx-2"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Alpine.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.min.js"
+      defer
+    ></script>
+    <script>
+      document.getElementById("hamburger").addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

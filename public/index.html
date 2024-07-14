@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Padukuhan Jaten</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/logoJaten.png" type="image/png" />
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      .bg-dusun-jaten {
+        background-image: url("./img/dusunJaten.png");
+      }
+      .bg-umkm {
+        background-image: url("./img/umkmJaten.png");
+      }
+      .btn-custom {
+        border: 2px solid white;
+        transition: all 0.3s ease;
+      }
+      .btn-custom:hover {
+        border: 2px solid white;
+      }
+      .logo {
+        width: 65px; /* Ubah sesuai ukuran yang diinginkan */
+        height: auto;
+      }
+      .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0;
+      }
+      .header-container img {
+        margin-right: 1rem;
+      }
+      .header-container h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 h-screen overflow-hidden">
+    <!-- Main Content -->
+    <div class="flex flex-col h-full">
+      <!-- Navbar -->
+      <div class="header-container">
+        <h1>Padukuhan</h1>
+        <img src="img/logoJaten.png" alt="Logo Jaten" class="logo ml-2" />
+      </div>
+      <div class="flex flex-col md:flex-row flex-grow">
+        <!-- Dusun Jaten Section -->
+        <div class="relative w-full md:w-1/2 bg-cover bg-center bg-dusun-jaten">
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+          <div class="relative p-8 text-white h-full flex flex-col justify-center items-start">
+            <h2 class="text-2xl font-normal">SELAMAT DATANG</h2>
+            <h3 class="text-5xl font-extrabold mt-2">DUSUN JATEN</h3>
+            <p class="mt-4">Padukuhan Jaten, Ngestirejo Kec. Tanjungsari Kab. Gunung Kidul</p>
+            <a
+              href="profil.html"
+              class="mt-6 px-4 py-2 text-white font-semibold rounded flex items-center btn-custom hover:bg-white hover:text-black"
+            >
+              Discover More <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <!-- UMKM Section -->
+        <div class="relative w-full md:w-1/2 bg-cover bg-center bg-umkm">
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+          <div class="relative p-8 text-white h-full flex flex-col justify-center items-start">
+            <h2 class="text-2xl font-normal">INFORMASI TENTANG</h2>
+            <h3 class="text-5xl font-extrabold mt-2">UMKM</h3>
+            <p class="mt-4">Menjual produk yang menggunakan bahan dasar singkong</p>
+            <a
+              href="umkm.html"
+              class="mt-6 px-4 py-2 text-white font-semibold rounded flex items-center btn-custom hover:bg-white hover:text-black"
+            >
+              Discover More <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
